@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./cocktails_tutorial/App";
+import App from "./App";
 
-import { AppProvider } from "./cocktails_tutorial/Helper/context";
+import { AppProvider } from "./Helper/context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
