@@ -9,6 +9,7 @@ import "./home.css";
 function Home() {
     const [query, setQuery] = useState("");
     const [cocktail, setCocktail] = useState([]);
+    const [loading, setLoading] = useState(true);
     const loadingDetailArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]; // this is to map over loading elements to give ids
     const { closeNavBar } = useGlobalContext();
 
@@ -18,17 +19,20 @@ function Home() {
     );
 
     const updateQuery = debounce((text) => {
+        setLoading(false);
         setQuery(text);
     });
 
     const getSearchTerm = (text) => {
         updateQuery(text);
+        setLoading(true);
     };
 
     useEffect(() => {
         if (!isLoading) {
             console.log(cocktails);
             setCocktail(cocktails.drinks);
+            setLoading(false);
         }
     }, [isLoading, cocktails, cocktails.drinks]);
 
@@ -58,7 +62,7 @@ function Home() {
                         <div className='error'>
                             Something went wrong. Please try again.
                         </div>
-                    ) : isLoading ? (
+                    ) : loading ? (
                         loadingDetailArr.map((id) => {
                             return <LoadingCocktail key={id}></LoadingCocktail>;
                         })
