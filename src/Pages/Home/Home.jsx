@@ -53,7 +53,7 @@ function Home() {
             </div>
             <section className='cocktails_section'>
                 <h1 className='cocktails__title'>Cocktails</h1>
-                <div className='cocktail_container'>
+                <div className='cocktails_container'>
                     {isError ? (
                         <div className='error'>
                             Something went wrong. Please try again.
