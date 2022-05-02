@@ -55,7 +55,7 @@
     text-transform: capitalize;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 768px) {
     .detail_container {
         flex-wrap: wrap;
     }
