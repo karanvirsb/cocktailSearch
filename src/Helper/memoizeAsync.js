@@ -8,8 +8,6 @@ const memoizeAsync = () => {
     return (config, callback) => {
         const { url, key, duration } = config;
 
-        console.log("made it");
-
         if (cache.hasOwnProperty(key)) {
             console.log("this key was in cache :", key);
             callback({ data: cache[key].data, loading: false, error: false });
