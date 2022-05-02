@@ -1,0 +1,20 @@
+.about_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-block: 4rem;
+    text-align: center;
+}
+
+.about__title {
+    color: #022d36;
+    text-align: center;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.about__desc {
+    width: clamp(35ch, 50vw, 85ch);
+    padding-inline: 0.5rem;
+}
