@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home, About, CocktailDetail } from "./Pages";
 import { Navbar } from "./Components/Navbar.jsx";
 import "./app.css";
 
 function App() {
+    useEffect(() => {
+        document.title = "Cocktail Search";
+    }, []);
     return (
         <main>
             <BrowserRouter>
