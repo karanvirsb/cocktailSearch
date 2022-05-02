@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
+import generateHash from "../Helper/generateHash";
+import memoizeAsync from "../Helper/memoizeAsync";
 
 function useCocktailSearch(url) {
     const [cocktails, setCocktails] = useState([]);
@@ -7,23 +8,19 @@ function useCocktailSearch(url) {
     const [isError, setIsError] = useState(false);
 
     useEffect(() => {
-        let cancel;
         setIsLoading(true);
-        axios({
-            method: "GET",
+        const config = {
             url: url,
-            cancelToken: new axios.CancelToken((c) => (cancel = c)),
-        })
-            .then((res) => {
-                console.log("data: ", res.data);
-                setCocktails(res.data);
-                setIsLoading(false);
-            })
-            .catch((e) => {
-                if (axios.isCancel(e)) return;
-                setIsError(true);
-            });
-        return () => cancel();
+            key: generateHash(["GET", url]),
+            duration: 500000,
+        };
+
+        memoizeAsync(config, (arr) => {
+            console.log(arr);
+            setCocktails(arr.data);
+            setIsLoading(arr.loading);
+            setIsError(arr.error);
+        });
     }, [url]);
 
     return { cocktails, isLoading, isError };
