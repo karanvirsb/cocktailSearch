@@ -8,13 +8,13 @@ This project allows to search a variety of cocktails from the given [api](https:
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/karanvirsb/cocktailSearch.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd my-project
+  cd cocktailSearch
 ```
 
 Install dependencies
