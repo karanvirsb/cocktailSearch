@@ -30,3 +30,8 @@ Start the server
 ```
 
 Go to http://localhost:3000 in your browser and start searching. 
+
+## How to search
+1. When page loads use the search bar at the top. 
+2. To look at further details click on the green details button. 
+3. Then on the details page to go back click the green Back Home button or the navigation Home button.
