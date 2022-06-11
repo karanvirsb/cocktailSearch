@@ -35,3 +35,14 @@ Go to http://localhost:3000 in your browser and start searching.
 1. When page loads use the search bar at the top. 
 2. To look at further details click on the green details button. 
 3. Then on the details page to go back click the green Back Home button or the navigation Home button.
+
+
+## User Stories
+1. User wants to see how a cocktail looks like.
+2. User wants to know how to make the cocktail.
+3. User wants to make a specific cocktail.
+
+## Tech Stack
+
+**Client:** React, CSS
+
