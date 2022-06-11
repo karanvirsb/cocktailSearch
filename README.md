@@ -46,3 +46,8 @@ Go to http://localhost:3000 in your browser and start searching.
 
 **Client:** React, CSS
 
+## How it looks
+
+![Home page](https://github.com/karanvirsb/cocktailSearch/blob/main/src/cocktail-db.webp)
+
+![Details Page](https://github.com/karanvirsb/cocktailSearch/blob/main/src/cocktail-db.webp)
