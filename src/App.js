@@ -5,9 +5,6 @@ import { Navbar } from "./Components/Navbar.jsx";
 import "./app.css";
 
 function App() {
-    useEffect(() => {
-        document.title = "Cocktail Search";
-    }, []);
     return (
         <main>
             <BrowserRouter>
